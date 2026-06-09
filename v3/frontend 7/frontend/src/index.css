@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-graphite font-sans antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    @apply bg-forest-500/20 text-forest-900;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  .h-display {
+    @apply font-display font-extrabold tracking-tight text-graphite;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-forest-200 bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-forest-600;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all duration-300 focus:outline-none;
+  }
+  .btn-primary {
+    @apply btn bg-forest-700 text-white shadow-soft hover:bg-forest-800 hover:shadow-float hover:-translate-y-0.5;
+  }
+  .btn-ghost {
+    @apply btn border border-forest-200 bg-white text-forest-800 hover:border-forest-400 hover:bg-forest-50;
+  }
+  .glass-card {
+    @apply rounded-2xl border border-white/60 bg-white/85 shadow-card backdrop-blur-md;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-lg border border-forest-100 bg-white px-3 py-2 text-xs font-medium text-graphite shadow-sm;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cdd9d0;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1f6440;
+}
+
+.bg-grid {
+  background-image: radial-gradient(rgba(18, 61, 40, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.text-balance {
+  text-wrap: balance;
+}
